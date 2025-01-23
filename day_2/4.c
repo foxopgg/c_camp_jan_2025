@@ -1,15 +1,15 @@
+// C Program to Swap Two Numbers using a 
+// Temporary Variable
 #include <stdio.h>
 
 int main() {
-    int a, b;
-    printf("Enter two numbers (a and b): ");
-    scanf("%d %d", &a, &b);
+    int a = 5, b = 10, temp;
 
-    a = a + b;
-    b = a - b;
-    a = a - b;
+    // Swapping values of a and  b
+    temp = a;
+    a = b;
+    b = temp;
 
-    printf("After swapping: a = %d, b = %d\n", a, b);
-
+    printf("a = %d, b = %d\n", a, b);
     return 0;
 }
