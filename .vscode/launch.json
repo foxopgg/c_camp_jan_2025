@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/USER/Documents/GitHub/c_camp_jan_2025/22/01/25",
-      "program": "c:/Users/USER/Documents/GitHub/c_camp_jan_2025/22/01/25/build/Debug/outDebug",
+      "cwd": "c:/Users/USER/Documents/GitHub/c_camp_jan_2025/day_1&2",
+      "program": "c:/Users/USER/Documents/GitHub/c_camp_jan_2025/day_1&2/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
