@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
 int main() {
     int n;
@@ -6,12 +8,12 @@ int main() {
     scanf("%d", &n);
 
     int arr[n];
+    srand(time(0));
     for(int i = 0; i < n; i++) {
-        printf("Enter element %d: ", i+1);
-        scanf("%d", &arr[i]);
+        arr[i] = rand() % 100 + 1;
     }
 
-    printf("Array: ");
+    printf("Array with random numbers: ");
     for(int i = 0; i < n; i++) {
         printf("%d ", arr[i]);
     }

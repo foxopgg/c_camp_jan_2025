@@ -11,10 +11,18 @@ int main() {
         scanf("%d", &arr[i]);
     }
 
-    printf("Array: ");
+    int search_element;
+    printf("Enter element to count occurrences: ");
+    scanf("%d", &search_element);
+
+    int count = 0;
     for(int i = 0; i < n; i++) {
-        printf("%d ", arr[i]);
+        if(arr[i] == search_element) {
+            count++;
+        }
     }
+
+    printf("Occurrences of element: %d\n", count);
 
     return 0;
 }
