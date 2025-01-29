@@ -1,21 +1,31 @@
 #include <stdio.h>
 
-void insertAtPosition(int arr[], int size, int value, int pos) {
-    for (int i = size; i > pos; i--) {
+int main() {
+    int n;
+    printf("Enter number of elements: ");
+    scanf("%d", &n);
+    int arr[n+1];
+    printf("INPUT : [ ");
+    for(int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+    printf(" ]");
+    int value, pos;
+    printf("Enter value to insert: ");
+    scanf("%d", &value);
+    printf("Enter position to insert at (0 to %d): ", n);
+    scanf("%d", &pos);
+
+    for (int i = n; i > pos; i--) {
         arr[i] = arr[i - 1];
     }
     arr[pos] = value;
-}
-
-int main() {
-    int arr[5] = {1, 2, 3};
-    int size = 3;
-    int value = 5;
-    int pos = 2;
-    insertAtPosition(arr, size, value, pos);
-    size++;
-    for (int i = 0; i < size; i++) {
+    n++;
+    printf("Output : ");
+    printf("[ ");
+    for (int i = 0; i < n; i++) {
         printf("%d ", arr[i]);
     }
+    printf(" ]");
     return 0;
 }

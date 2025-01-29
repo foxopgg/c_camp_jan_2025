@@ -1,19 +1,26 @@
 #include <stdio.h>
 
-void reverseArray(int arr[], int size) {
-    for (int i = 0; i < size / 2; i++) {
-        int temp = arr[i];
-        arr[i] = arr[size - i - 1];
-        arr[size - i - 1] = temp;
+void main() {
+    int n;
+    printf("Enter number of elements: ");
+    scanf("%d", &n);
+    int arr[n];
+    printf("INPUT : [ ");
+    for(int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
     }
-}
-
-int main() {
-    int arr[] = {1, 2, 3, 4};
-    int size = sizeof(arr) / sizeof(arr[0]);
-    reverseArray(arr, size);
-    for (int i = 0; i < size; i++) {
+    printf(" ]");
+    for (int i = 0; i < n / 2; i++) {
+        int temp = arr[i];
+        arr[i] = arr[n - i - 1];
+        arr[n - i - 1] = temp;
+    }
+    printf("OUTPUT :");
+    printf("[ ");
+    for (int i = 0; i < n; i++) {
         printf("%d ", arr[i]);
     }
+    printf("]");
     return 0;
 }
+

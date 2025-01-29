@@ -1,19 +1,27 @@
 #include <stdio.h>
 
-void removeAtPosition(int arr[], int size, int pos) {
-    for (int i = pos; i < size - 1; i++) {
+int main() {
+    int n;
+    printf("Enter number of elements: ");
+    scanf("%d", &n);
+    int arr[n]; 
+    printf("INPUT : [ ");
+    for(int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+    printf(" ]");
+    int pos;
+    printf("Enter position to remove (0 to %d): ", n - 1);
+    scanf("%d", &pos);
+    for (int i = pos; i < n - 1; i++) {
         arr[i] = arr[i + 1];
     }
-}
-
-int main() {
-    int arr[] = {1, 2, 3, 4};
-    int size = sizeof(arr) / sizeof(arr[0]);
-    int pos = 2;
-    removeAtPosition(arr, size, pos);
-    size--;
-    for (int i = 0; i < size; i++) {
+    n--;
+    printf("Output : ");
+    printf("[ ");
+    for (int i = 0; i < n; i++) {
         printf("%d ", arr[i]);
     }
+    printf(" ]");
     return 0;
 }

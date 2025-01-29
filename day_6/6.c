@@ -1,19 +1,26 @@
 #include <stdio.h>
 
-void shiftLeft(int arr[], int size) {
+int main() {
+    int n;
+    printf("Enter number of elements: ");
+    scanf("%d", &n);
+    int arr[n];
+    printf("INPUT : [ ");
+    for(int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+    printf(" ]");
     int first = arr[0];
-    for (int i = 0; i < size - 1; i++) {
+    for (int i = 0; i < n - 1; i++) {
         arr[i] = arr[i + 1];
     }
-    arr[size - 1] = first;
-}
-
-int main() {
-    int arr[] = {1, 2, 3, 4};
-    int size = sizeof(arr) / sizeof(arr[0]);
-    shiftLeft(arr, size);
-    for (int i = 0; i < size; i++) {
+    arr[n - 1] = first;
+    
+    printf("Output : ");
+    printf("[ ");
+    for (int i = 0; i < n; i++) {
         printf("%d ", arr[i]);
     }
+    printf(" ]");
     return 0;
 }

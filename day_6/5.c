@@ -1,17 +1,22 @@
 #include <stdio.h>
-
-void swapFirstAndLast(int arr[], int size) {
-    int temp = arr[0];
-    arr[0] = arr[size - 1];
-    arr[size - 1] = temp;
-}
-
 int main() {
-    int arr[] = {5, 3, 8, 6};
-    int size = sizeof(arr) / sizeof(arr[0]);
-    swapFirstAndLast(arr, size);
-    for (int i = 0; i < size; i++) {
+    int n;
+    printf("Enter number of elements: ");
+    scanf("%d", &n);
+    int arr[n];
+    printf("INPUT : [ ");
+    for(int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+    printf(" ]");
+    int temp = arr[0];
+    arr[0] = arr[n - 1];
+    arr[n - 1] = temp; 
+    printf("Output :");
+    printf("[ ");
+    for (int i = 0; i < n; i++) {
         printf("%d ", arr[i]);
     }
+    printf(" ]");
     return 0;
 }
